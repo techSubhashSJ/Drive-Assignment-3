@@ -3,18 +3,44 @@ import React from "react";
 import { DealerListingsType } from "../../../types";
 
 const CarCardBody = (props: { car: DealerListingsType }) => {
+  const {
+    year,
+    makeName,
+    modelName,
+    price,
+    kms,
+    transmission,
+    fuelType,
+    seat_capacity,
+    colour,
+  } = props.car;
+  
   return (
-    <div className="flex items-center justify-between leading-tight p-2 md:p-4">
-      <h1 className="text-lg">
-        <Link href={`/`}>
-          <a
-            className="no-underline hover:underline text-black font-mono"
-            data-testid="news-title"
-          >
-            Trial hdhawfkjh...
+    <div className="p-4">
+      <div className="flex justify-between">
+        <Link href={"/"}>
+          <a>
+            <h1 className="font-body font-semibold text-2xl hover:text-primary_hover">
+              {year} {makeName} {modelName}
+            </h1>
           </a>
         </Link>
-      </h1>
+        <h1 className="font-body font-bold text-2xl">$ {price}</h1>
+      </div>
+
+      <div className="flex flex-col mt-8 text-lg md:flex-row md:space-x-10">
+        <ul role="list" className="list-disc pl-5 space-y-3 ">
+          <li>{kms} km</li>
+          <li>{colour}</li>
+        </ul>
+
+        <ul role="list" className="list-disc pl-5 space-y-3 ">
+          <li>{fuelType}</li>
+          <li>
+            {seat_capacity} {transmission}
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
