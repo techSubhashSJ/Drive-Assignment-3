@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
+import { DealerListingsType } from "../../../types";
 
-const CarCardBody = () => {
+const CarCardBody = (props: {car: DealerListingsType}) => {
   return (
     <>
       <header className="flex items-center justify-between leading-tight p-2 md:p-4">
