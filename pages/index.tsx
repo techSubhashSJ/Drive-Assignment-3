@@ -3,33 +3,15 @@ import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import Layout from "../components/layout";
 import CarCard from "../components/card";
+import { DealerListingsType } from "../types";
 
-type DealerListingsType = {
-  colour: string;
-  engineSize: number;
-  fuelType: string;
-  id: number;
-  image: string;
-  kms: number;
-  listType: string;
-  makeName: string;
-  modelName: string;
-  price: number;
-  region: { regionName: string; __typename: string };
-  seat_capacity: number;
-  state: string;
-  transmission: string;
-  variant: string;
-  vehicleKey: string;
-  year: number;
-  __typename: string;
-};
+type HomePagePropsType = { cars: DealerListingsType[] };
 
-const Home: NextPage<{ data: DealerListingsType[] }> = ({ data }) => {
+const Home: NextPage<HomePagePropsType> = ({ cars }) => {
   return (
     <Layout>
       <div className="mx-[5%] my-[2%] gap-4 grid md:grid-cols-2 lg:grid-cols-3">
-        {data.slice(0, 9).map((car, index) => (
+        {cars.slice(0, 9).map((car, index) => (
           <CarCard car={car} key={index} />
         ))}
       </div>
@@ -72,7 +54,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: data.DealerListings.results,
+      cars: data.DealerListings.results,
     },
   };
 }
