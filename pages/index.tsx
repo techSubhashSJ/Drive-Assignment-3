@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 import Layout from "../src/components/layout";
+import CarCard from "../src/components/card";
 
 type DealerListingsType = {
   colour: string;
@@ -21,17 +22,17 @@ type DealerListingsType = {
   variant: string;
   vehicleKey: string;
   year: number;
-  __typename: "DealerListing";
-}[];
+  __typename: string;
+};
 
-const Home: NextPage<{ data: [DealerListingsType] }> = ({ data }) => {
-  console.log(data);
-
+const Home: NextPage<{ data: DealerListingsType[] }> = ({ data }) => {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline" role="heading">
-        Welcome to next.js!
-      </h1>
+      <div className="mx-[5%] my-[2%] gap-4 grid md:grid-cols-2 lg:grid-cols-3">
+        {data.slice(0, 9).map((car, index) => (
+          <CarCard car={car} key={index} />
+        ))}
+      </div>
     </Layout>
   );
 };
