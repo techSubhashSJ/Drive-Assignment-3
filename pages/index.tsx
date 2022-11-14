@@ -10,10 +10,12 @@ type HomePagePropsType = { cars: DealerListingsType[] };
 const Home: NextPage<HomePagePropsType> = ({ cars }) => {
   return (
     <Layout>
-      <div className="mx-[5%] my-[2%] gap-4 grid md:grid-cols-2 lg:grid-cols-3">
-        {cars.slice(0, 9).map((car, index) => (
-          <CarCard car={car} key={index} />
-        ))}
+      <div className="xl:flex xl:justify-center">
+        <div className="mx-[5%] my-[2%] gap-4 grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl">
+          {cars.slice(0, 9).map((car, index) => (
+            <CarCard car={car} key={index} />
+          ))}
+        </div>
       </div>
     </Layout>
   );
