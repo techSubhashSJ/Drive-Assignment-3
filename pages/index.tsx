@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
-import Layout from "../src/components/layout";
-import CarCard from "../src/components/card";
+import Layout from "../components/layout";
+import CarCard from "../components/card";
 
 type DealerListingsType = {
   colour: string;
