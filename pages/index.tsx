@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { useLazyQuery } from "@apollo/client";
 import client from "../apollo-client";
 import Layout from "../components/layout";
@@ -74,7 +74,7 @@ const Home: NextPage<HomePagePropsType> = ({ cars, pageInfo }) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   const { data } = await client.query({
     query: GET_CARS,
   });
@@ -85,4 +85,4 @@ export async function getStaticProps() {
       pageInfo: data.DealerListings.pageInfo,
     },
   };
-}
+};
