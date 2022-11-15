@@ -18,3 +18,11 @@ export type DealerListingsType = {
   year: number;
   __typename: string;
 };
+
+export type pageInfoType = {
+  __typename: string;
+  hasNextPage: boolean;
+  currentPage: number;
+  pageCount: number;
+  itemCount: number;
+};
