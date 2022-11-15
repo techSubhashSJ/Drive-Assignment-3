@@ -20,7 +20,7 @@ const CarCardBody = (props: { car: DealerListingsType }) => {
       <div className="flex justify-between">
         <Link href={"/"}>
           <a>
-            <h1 className="font-body font-semibold text-2xl hover:text-primary_hover">
+            <h1 className="font-body font-semibold text-xl hover:text-primary_hover">
               {year} {makeName} {modelName}
             </h1>
           </a>
