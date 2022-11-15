@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const CarCardImage = (props: { src: string }) => {
+const CarCardImage = (props: { src: string; id: number }) => {
   return (
-    <Link href={"/"}>
+    <Link href={`/cars-for-sale/car/${props.id}`}>
       <a>
         <img
           alt="Image not available"

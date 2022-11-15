@@ -13,12 +13,13 @@ const CarCardBody = (props: { car: DealerListingsType }) => {
     fuelType,
     seat_capacity,
     colour,
+    id,
   } = props.car;
-  
+
   return (
     <div className="p-4">
       <div className="flex justify-between">
-        <Link href={"/"}>
+        <Link href={`/cars-for-sale/car/${id}`}>
           <a>
             <h1 className="font-body font-semibold text-xl hover:text-primary_hover">
               {year} {makeName} {modelName}
