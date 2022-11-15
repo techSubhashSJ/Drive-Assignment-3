@@ -26,3 +26,13 @@ export type pageInfoType = {
   pageCount: number;
   itemCount: number;
 };
+
+export type pathsDatatype = {
+  params: { id: string };
+};
+
+export type carType = {
+  DealerListingImages: [];
+  RedbookVehicle: {};
+  id: BigInt;
+};
