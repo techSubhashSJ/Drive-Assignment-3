@@ -10,6 +10,9 @@ module.exports = {
         primary: "rgba(41,96,197)",
         primary_hover: "rgba(59,151,250)",
       },
+      screens: {
+        xsm: "400px",
+      },
     },
     fontFamily: {
       body: [
