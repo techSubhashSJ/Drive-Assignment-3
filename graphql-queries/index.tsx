@@ -85,6 +85,7 @@ export const GET_CAR_BY_ID = gql`
       DealerListingImages {
         image_location
       }
+      kms:odometer
       RedbookVehicle {
         RedbookMake {
           make: make_description
