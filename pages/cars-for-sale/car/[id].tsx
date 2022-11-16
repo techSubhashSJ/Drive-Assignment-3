@@ -4,13 +4,14 @@ import Layout from "../../../components/layout";
 import client from "../../../apollo-client";
 import { GET_CARS_IDS, GET_CAR_BY_ID } from "../../../graphql-queries";
 import { carType, pathsDatatype } from "../../../types/index";
+import SingleCar from "../../../components/single-car";
 
 type carPropsType = { car: carType };
 
 const Car: NextPage<carPropsType> = ({ car }) => {
   return (
     <Layout>
-      <div>Hello</div>
+      <SingleCar car={car} />
     </Layout>
   );
 };
@@ -44,6 +45,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: pathsData,
-    fallback: "blocking", 
+    fallback: "blocking",
   };
 };
