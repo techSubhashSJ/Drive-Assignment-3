@@ -1,5 +1,6 @@
 import React from "react";
 import { carType } from "../../types";
+import SingleCardBody from "./single-car-body";
 import SingleCarMedia from "./single-car-media";
 
 const SingleCar = (props: { car: carType }) => {
@@ -9,7 +10,7 @@ const SingleCar = (props: { car: carType }) => {
     <div className="flex justify-center">
       <div className="max-w-screen-2xl">
         <SingleCarMedia dealerListingImages={props.car.DealerListingImages} />
-        single car
+        <SingleCardBody id={props.car.id} kms={props.car.kms} redbookVehicle={props.car.RedbookVehicle}/>
       </div>
     </div>
   );
