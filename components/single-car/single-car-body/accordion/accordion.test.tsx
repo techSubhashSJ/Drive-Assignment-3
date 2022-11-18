@@ -5,7 +5,11 @@ import Accordion from ".";
 describe("Accordion Tests", () => {
   //single child
   it("Renders a passed child", async () => {
-    render(<Accordion children={<h1>Hello there</h1>} title="Single Child" />);
+    render(
+      <Accordion title="Single Child">
+        <h1>Hello there</h1>
+      </Accordion>
+    );
 
     const heading = screen.getByRole("heading", {
       name: /Hello there/i,
@@ -20,12 +24,10 @@ describe("Accordion Tests", () => {
   it("Renders passed children", async () => {
     render(
       <Accordion title="Multiple Children">
-        <>
-          <h1 key={1}>Hello there</h1>,
-          <p key={2} data-testid="para_cp">
-            This is test paragraph
-          </p>
-        </>
+        <h1 key={1}>Hello there</h1>
+        <p key={2} data-testid="para_cp">
+          This is test paragraph
+        </p>
       </Accordion>
     );
 
