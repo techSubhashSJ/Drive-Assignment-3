@@ -90,4 +90,12 @@ export type redbookVehicleType = {
   wheelBase: number;
   wheelBaseConfig: number | null;
   yearGroup: number;
+  vehicle_fuel_type_description: string;
+  vehicle_warranty_years: number;
+  vehicle_warranty_km: number;
+};
+
+export type specificationType = {
+  title: string;
+  value: string;
 };
