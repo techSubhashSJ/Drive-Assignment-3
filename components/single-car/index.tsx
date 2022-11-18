@@ -4,8 +4,6 @@ import SingleCardBody from "./single-car-body";
 import SingleCarMedia from "./single-car-media";
 
 const SingleCar = (props: { car: carType }) => {
-  console.log(props.car);
-
   return (
     <div className="flex justify-center">
       <div className="max-w-screen-2xl">
