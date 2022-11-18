@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -9,9 +10,11 @@ module.exports = {
       colors: {
         primary: "rgba(41,96,197)",
         primary_hover: "rgba(59,151,250)",
+        secondary: "rgba(247,247,247)",
       },
       screens: {
         xsm: "400px",
+        md: "720px",
       },
     },
     fontFamily: {
