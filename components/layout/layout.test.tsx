@@ -16,12 +16,14 @@ describe("Layout Tests", () => {
   //multiple children
   it("Renders passed children", async () => {
     render(
-      <Layout
-        children={[
+      <Layout>
+        <>
           <h1 key={1}>Hello there</h1>,
-          <p key={2} data-testid="para">This is test paragraph</p>,
-        ]}
-      />
+          <p key={2} data-testid="para">
+            This is test paragraph
+          </p>
+        </>
+      </Layout>
     );
 
     const heading = screen.getByRole("heading", {
