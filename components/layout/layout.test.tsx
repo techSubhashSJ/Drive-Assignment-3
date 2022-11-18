@@ -5,7 +5,11 @@ import Layout from ".";
 describe("Layout Tests", () => {
   //single child
   it("Renders a passed child", async () => {
-    render(<Layout children={<h1>Hello there</h1>} />);
+    render(
+      <Layout>
+        <h1>Hello there</h1>
+      </Layout>
+    );
 
     const heading = screen.getByRole("heading", {
       name: /Hello there/i,
@@ -17,12 +21,10 @@ describe("Layout Tests", () => {
   it("Renders passed children", async () => {
     render(
       <Layout>
-        <>
-          <h1 key={1}>Hello there</h1>,
-          <p key={2} data-testid="para">
-            This is test paragraph
-          </p>
-        </>
+        <h1 key={1}>Hello there</h1>
+        <p key={2} data-testid="para">
+          This is test paragraph
+        </p>
       </Layout>
     );
 
