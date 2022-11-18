@@ -30,12 +30,12 @@ const CarCardBody = (props: { car: DealerListingsType }) => {
       </div>
 
       <div className="flex flex-col mt-8 text-lg md:flex-row md:space-x-10">
-        <ul role="list" className="list-disc pl-5 space-y-3 ">
+        <ul data-testid="list" className="list-disc pl-5 space-y-3">
           <li>{kms} km</li>
           <li>{colour}</li>
         </ul>
 
-        <ul role="list" className="list-disc pl-5 space-y-3 ">
+        <ul data-testid="list" className="list-disc pl-5 space-y-3 ">
           <li>{fuelType}</li>
           <li>
             {seat_capacity} {transmission}

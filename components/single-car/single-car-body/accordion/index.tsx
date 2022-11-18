@@ -28,7 +28,7 @@ const Accordion = (props: {
         className="py-6 box-border appearance-none cursor-pointer focus:outline-none flex items-center justify-between"
         onClick={toggleAccordion}
       >
-        <p className="inline-block text-footnote text-xl font-bold">
+        <p data-testid="para" className="inline-block text-footnote text-xl font-bold">
           {props.title}
         </p>
         <DownOutlined alt="Chevron icon" className={`${rotate} inline-block`} />

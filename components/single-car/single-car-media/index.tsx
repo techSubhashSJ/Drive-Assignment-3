@@ -22,10 +22,12 @@ const SingleCarMedia = (props: {
         <LeftOutlined
           className="absolute top-[45%] left-[1rem] text-3xl z-10 text-slate-700 hover:text-white"
           onClick={prevSlide}
+          data-testid="left-btn"
         />
         <RightOutlined
           className="absolute top-[45%] right-[1rem] text-3xl z-10 text-slate-700 hover:text-white"
           onClick={nextSlide}
+          data-testid="right-btn"
         />
         {props.dealerListingImages.map((image, index) => {
           return (
@@ -35,6 +37,7 @@ const SingleCarMedia = (props: {
                   src={image.image_location}
                   alt="car image"
                   className="w-[1440px] h-[500px] rounded object-cover"
+                  data-testid="image"
                 />
               )}
             </div>
