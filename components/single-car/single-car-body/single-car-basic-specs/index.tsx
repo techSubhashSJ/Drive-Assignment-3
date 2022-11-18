@@ -3,7 +3,6 @@ import { redbookVehicleType } from "../../../../types";
 import getBasicSpecificationData from "./single-car-basic-specs-data";
 
 const BasicSpecs = (props: {
-  id: BigInt;
   kms: number;
   redbookVehicle: redbookVehicleType;
 }) => {

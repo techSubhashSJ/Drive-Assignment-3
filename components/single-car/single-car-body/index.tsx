@@ -13,11 +13,7 @@ const SingleCardBody = (props: {
 }) => {
   return (
     <>
-      <BasicSpecs
-        id={props?.id}
-        kms={props?.kms}
-        redbookVehicle={props?.redbookVehicle}
-      />
+      <BasicSpecs kms={props?.kms} redbookVehicle={props?.redbookVehicle} />
 
       <hr className="mt-16 mx-[10%]" />
 
