@@ -19,15 +19,14 @@ describe("Accordion Tests", () => {
   //multiple children
   it("Renders passed children", async () => {
     render(
-      <Accordion
-        children={[
+      <Accordion title="Multiple Children">
+        <>
           <h1 key={1}>Hello there</h1>,
           <p key={2} data-testid="para_cp">
             This is test paragraph
-          </p>,
-        ]}
-        title="Multiple Children"
-      />
+          </p>
+        </>
+      </Accordion>
     );
 
     const heading = screen.getByRole("heading", {
