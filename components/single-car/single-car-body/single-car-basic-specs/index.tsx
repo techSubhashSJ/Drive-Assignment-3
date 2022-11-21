@@ -22,7 +22,7 @@ const BasicSpecs = (props: {
       {basicSpecifications?.map((spec, index) => (
         <div className="flex items-center space-x-4" key={index}>
           <img src={spec.iconSrc} alt={spec.altText} className="w-8" />
-          <p>{spec.value}</p>
+          <p data-testid="para">{spec.value}</p>
         </div>
       ))}
     </div>
