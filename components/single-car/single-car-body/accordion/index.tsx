@@ -23,7 +23,7 @@ const Accordion = (props: {
   }
 
   return (
-    <div className="flex flex-col mx-[10%] my-2">
+    <div className="flex flex-col mx-[5%] my-2">
       <button
         className="py-6 box-border appearance-none cursor-pointer focus:outline-none flex items-center justify-between"
         onClick={toggleAccordion}

@@ -18,7 +18,7 @@ const BasicSpecs = (props: {
   });
 
   return (
-    <div className="mx-[10%] my-4 gap-8 grid grid-cols-2 md:grid-cols-4">
+    <div className="mx-[5%] my-4 gap-8 grid grid-cols-2 md:grid-cols-4">
       {basicSpecifications?.map((spec, index) => (
         <div className="flex items-center space-x-4" key={index}>
           <img src={spec.iconSrc} alt={spec.altText} className="w-8" />

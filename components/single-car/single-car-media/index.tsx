@@ -17,8 +17,8 @@ const SingleCarMedia = (props: {
   };
 
   return (
-    <div className="flex mt-4 mx-[10%]">
-      <section className="relative max-w-screen-xl">
+    <div className="flex mt-4 mx-[5%]">
+      <section className="relative max-w-screen-2xl">
         <LeftOutlined
           className="absolute top-[45%] left-[1rem] text-3xl z-10 text-slate-700 hover:text-white"
           onClick={prevSlide}
@@ -38,7 +38,7 @@ const SingleCarMedia = (props: {
               <img
                 src={image.image_location}
                 alt="car image"
-                className="w-[1440px] h-[500px] rounded object-cover"
+                className="block w-full rounded object-contain"
                 data-testid="image"
               />
             </div>

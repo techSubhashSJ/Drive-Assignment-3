@@ -15,15 +15,15 @@ const SingleCardBody = (props: {
     <>
       <BasicSpecs kms={props?.kms} redbookVehicle={props?.redbookVehicle} />
 
-      <hr className="mt-16 mx-[10%]" />
+      <hr className="mt-16 mx-[5%]" />
 
       <EngineAndPerformanceSpec redbookVehicle={props?.redbookVehicle} />
 
-      <hr className="mx-[10%]" />
+      <hr className="mx-[5%]" />
 
       <TransmissionSpec redbookVehicle={props?.redbookVehicle} />
 
-      <hr className="mx-[10%]" />
+      <hr className="mx-[5%]" />
 
       <Dimensions redbookVehicle={props?.redbookVehicle} />
     </>
