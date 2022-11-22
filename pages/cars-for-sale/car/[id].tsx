@@ -2,7 +2,10 @@ import React from "react";
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import Layout from "../../../components/layout";
 import client from "../../../apollo-client";
-import { GET_CARS_IDS, GET_CAR_BY_ID } from "../../../graphql-queries";
+import {
+  GET_CARS_IDS,
+  GET_CAR_BY_ID,
+} from "../../../graphql-queries/getCarById";
 import { carType, pathsDatatype } from "../../../types/index";
 import SingleCar from "../../../components/single-car";
 
