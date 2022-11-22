@@ -1,14 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.car {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
-
-.car.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: translateY(0.125rem);
-}

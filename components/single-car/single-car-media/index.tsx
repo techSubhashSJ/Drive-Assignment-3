@@ -31,15 +31,16 @@ const SingleCarMedia = (props: {
         />
         {props.dealerListingImages.map((image, index) => {
           return (
-            <div key={index} className={index === current ? 'car active' : 'car'}>
-              {index === current && (
-                <img
-                  src={image.image_location}
-                  alt="car image"
-                  className="w-[1440px] h-[500px] rounded object-cover"
-                  data-testid="image"
-                />
-              )}
+            <div
+              key={index}
+              className={index === current ? "opacity-100" : "hidden" }
+            >
+              <img
+                src={image.image_location}
+                alt="car image"
+                className="w-[1440px] h-[500px] rounded object-cover"
+                data-testid="image"
+              />
             </div>
           );
         })}
