@@ -18,7 +18,7 @@ const SingleCarMedia = (props: {
 
   return (
     <div className="flex mt-4 mx-[5%]">
-      <section className="relative max-w-screen-2xl">
+      <section className="relative max-w-5xl">
         <LeftOutlined
           className="absolute top-[45%] left-[1rem] text-3xl z-10 text-slate-700 hover:text-white"
           onClick={prevSlide}
