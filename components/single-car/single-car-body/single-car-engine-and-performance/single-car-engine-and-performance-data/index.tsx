@@ -64,7 +64,7 @@ const getEngineAndPerformnaceData = (redbookVehicle: redbookVehicleType) => {
     },
 
     {
-      title: "Acceleration display name 0-100km/h",
+      title: "Acceleration (0 - 100 km/h)",
       value: `${acceleration ? acceleration : "-"}`,
     },
   ];
